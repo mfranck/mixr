@@ -68,7 +68,8 @@ init(_Args) ->
                        auto_discover => [{enable, false}],
                        search_policy => local,
                        store => mixr_mem_store,
-                       rest => [{enable, false}]},
+                       rest => [{enable, false}],
+                       plugins => []},
                      application:get_all_env(mixr))}
   catch
     error:E -> {stop, E}
